@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang=”en”>
+    <head>
+        <title>3 Day Journal</title>
+        <meta name="keywords" content="Journal">
+        <meta name="author" content="Christian Lee">
+        <link rel="icon" href="./files/book1.png" type="image" sizes="16x16">
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1> <span style="color:blueviolet">3 Day Journal</span></h1>
+                <p>
+                    This is a 3 day journal in which I will have a short description of the day along with 
+                    something that I found amusing or interesting. 
+                </p>
+            </header>
+
+            <hr>
+
+            <section>
+                <h2>Navigation</h2>
+                <nav>
+                    <ul>
+                        <li> <a href="#day1"> Day 1 </a> </li>
+                        <li> <a href="#day2"> Day 2 </a> </li>
+                        <li ><a href="#day3"> Day 3 </a> </li>
+                    </ul>
+                </nav>
+            </section>
+
+            <hr>
+
+            <section id="day1">
+                <h2>Day 1</h2>
+                <p>
+                    Today, I went to my classes and then did homework. There wasn't a lot, so I decided to take a nap first.
+                    This was a <strong>big mistake</strong> as I overslept and I missed dinner. <br>
+                    I found this amusing meme so I wanted to share it
+                    with you guys.
+                </p>
+                <div class="meme1">
+                    <img src="./files/disneymeme.jpg" alt="meme">
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="day2">
+                <h2>Day 2</h2>
+                <p>
+                    Today, nothing really happened. I just went to class and attended some meetings as usual. I ate some really good food
+                    today. It was really <em>fancy</em> and I wonder how we had the money to afford such a meal. <br>I'm sure it was some <i>special</i> occasion
+                    that I just didn't know about. For some reason, clean energy is on my mind so I'm going to post a video of windmills.
+                </p>
+                <div class="video">
+                    <video width="720" height="420" controls>
+                        <source src="./files/windmills_cluster720p.mov">
+                    </video>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="day3">
+                <h2>Day 3</h2>
+                <p>
+                    Today, I woke up pretty late. I <b>missed</b> my morning class so I had to wait for the lecture recording. The recording never came
+                    so I guess I'll just skip it for now. I am now working on the lab for CSE 110. I have three goals for today:
+                    <ol>
+                        <li>Work on the lab</li>
+                        <li>Exercise</li>
+                        <li>Read a book</li>
+                    </ol>
+                    I really enjoy studio ghibli songs so I wanted to share one of my favorites:
+                </p>
+                
+                <div class="song">
+                    <audio controls>
+                        <source src="./files/Merry Go Round of Life - Howl's Moving Castle (Joe Hisaishi) (320  kbps).mp3">
+                    </audio>
+                </div>
+
+                <details>
+                    <summary>Song Details</summary>
+                    <p>
+                        "The Merry Go Round of Life" by Joe Hirashi <br>
+                        From <i>Howl's Moving Castle</i>
+                    </p>
+                </details>
+
+            </section>
+
+            <hr>
+
+            <form>
+                <fieldset>
+                    <legend>New Entry Form</legend>
+
+                    <label for="day">Day Number:</label>
+                    <input type="text" id="day" name="day_num"> <br><br>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="curr_date"> <br><br>
+
+                    <label for="check">Bookmark?:</label>
+                    <input type="checkbox" id="Yes" name="good_day"> <br><br>
+
+                    <label>Type of Media:</label> <br>
+                    <div>
+                        <label for="img">image</label>
+                        <input type="radio" id="img" name="media">
+                    </div>
+
+                    <div>
+                        <label for="audio">audio</label>
+                        <input type="radio" id="audio" name="media">
+                    </div>
+
+                    <div>
+                        <label for="video">video</label>
+                        <input type="radio" id="video" name="media"> 
+                    </div><br><br>
+
+                    <label for="colors">Color of Post</label>
+                    <input list="color_of_text" name="colors" id="colors">
+                    <datalist id="color_of_text">
+                        <option value="Black">
+                        <option value="Red">
+                        <option value="Blue">
+                    </datalist> <br><br>
+
+                    <label for="type_day">How was the day?</label>
+                    <select name="type_day" id="type_day">
+                        <option value="Okay">Okay</option>
+                        <option value="Bad">Bad</option>
+                        <option value="Good">Good</option>
+                    </select><br><br>
+                    
+
+                    <lebel for="msg">Description of Day:</lebel><br>
+                    <textarea id="msg" name="user_msg"></textarea><br><br>
+
+                    <button>Submit</button>
+
+
+                </fieldset>
+            </form>
+
+            <hr>
+
+            <footer>
+                <h3>Made by Christian Lee</h3>
+            </footer>
+
+        </main>
+    </body>
+</html>
