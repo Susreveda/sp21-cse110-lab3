@@ -5,6 +5,12 @@
         <meta name="keywords" content="Journal">
         <meta name="author" content="Christian Lee">
         <link rel="icon" href="./files/book1.png" sizes="16x16">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            h2 {
+                color: blue;
+            }
+        </style>
     </head>
     <body>
         <main>
@@ -18,7 +24,7 @@
 
             <hr>
 
-            <section>
+            <section id="navi">
                 <h2>Navigation</h2>
                 <nav>
                     <ul>
@@ -31,29 +37,33 @@
 
             <hr>
 
-            <section id="day1">
-                <h2>Day 1</h2>
-                <p>
-                    Today, I went to my classes and then did homework. There wasn't a lot, so I decided to take a nap first.
-                    This was a <strong>big mistake</strong> as I overslept and I missed dinner. <br>
-                    I found this amusing meme so I wanted to share it
-                    with you guys.
-                </p>
-                <div class="meme1">
+            <section class="day_box">
+                <h2 class="day_title">Day 1</h2>
+                <div class="day_msg">
+                    <p>
+                        Today, I went to my classes and then did homework. There wasn't a lot, so I decided to take a nap first.
+                        This was a <strong>big mistake</strong> as I overslept and I missed dinner. <br>
+                        I found this amusing meme so I wanted to share it
+                        with you guys.
+                    </p>
+                </div>
+                <div id="meme1">
                     <img src="./files/disneymeme.jpg" alt="meme">
                 </div>
             </section>
 
             <hr>
 
-            <section id="day2">
-                <h2>Day 2</h2>
-                <p>
-                    Today, nothing really happened. I just went to class and attended some meetings as usual. I ate some really good food
-                    today. It was really <em>fancy</em> and I wonder how we had the money to afford such a meal. <br>
-                    I'm sure it was some <i>special</i> occasion that I just didn't know about. For some reason, clean energy is on my mind so I'm going to post a video of windmills.
-                </p>
-                <div class="video">
+            <section class="day_box">
+                <h2 class="day_title">Day 2</h2>
+                <div class="day_msg">
+                    <p>
+                        Today, nothing really happened. I just went to class and attended some meetings as usual. I ate some really good food
+                        today. It was really <em>fancy</em> and I wonder how we had the money to afford such a meal. <br>
+                        I'm sure it was some <i>special</i> occasion that I just didn't know about. For some reason, clean energy is on my mind so I'm going to post a video of windmills.
+                    </p>
+                </div>
+                <div id="video">
                     <video width="720" height="420" controls>
                         <source src="./files/windmills_cluster720p.mov">
                     </video>
@@ -62,35 +72,35 @@
 
             <hr>
 
-            <section id="day3">
-                <h2>Day 3</h2>
-                <p>
-                    Today, I woke up pretty late. I <b>missed</b> my morning class so I had to wait for the lecture recording. The recording never came
-                    so I guess I'll just skip it for now. I am now working on the lab for CSE 110. I have three goals for today:
-                </p>
-                    <ol>
-                        <li>Work on the lab</li>
-                        <li>Exercise</li>
-                        <li>Read a book</li>
-                    </ol>
-                <p>
-                    I really enjoy studio ghibli songs so I wanted to share one of my favorites:
-                </p>
-                
-                <div class="song">
+            <section class="day_box">
+                <h2 class="day_title">Day 3</h2>
+                <div class="day_msg">
+                    <p>
+                        Today, I woke up pretty late. I <b>missed</b> my morning class so I had to wait for the lecture recording. The recording never came
+                        so I guess I'll just skip it for now. I am now working on the lab for CSE 110. I have three goals for today:
+                    </p>
+                        <ol>
+                            <li>Work on the lab</li>
+                            <li>Exercise</li>
+                            <li>Read a book</li>
+                        </ol>
+                    <p>
+                        I really enjoy studio ghibli songs so I wanted to share one of my favorites:
+                    </p>
+                </div>
+                <div id="song">
                     <audio controls>
                         <source src="./files/sound.mp3">
                     </audio>
+
+                    <details>
+                        <summary>Song Details</summary>
+                        <p>
+                            "The Merry Go Round of Life" by Joe Hirashi <br>
+                            From <i>Howl's Moving Castle</i>
+                        </p>
+                    </details>
                 </div>
-
-                <details>
-                    <summary>Song Details</summary>
-                    <p>
-                        "The Merry Go Round of Life" by Joe Hirashi <br>
-                        From <i>Howl's Moving Castle</i>
-                    </p>
-                </details>
-
             </section>
 
             <hr>
@@ -99,51 +109,64 @@
                 <fieldset>
                     <legend>New Entry Form</legend>
 
-                    <label for="day">Day Number:</label>
-                    <input type="text" id="day" name="day_num"> <br><br>
-
-                    <label for="date">Date:</label>
-                    <input type="date" id="date" name="curr_date"> <br><br>
-
-                    <label for="Yes">Bookmark?:</label>
-                    <input type="checkbox" id="Yes" name="good_day"> <br><br>
-
-                    <label>Type of Media:</label> <br>
-                    <div>
-                        <label for="img">image</label>
-                        <input type="radio" id="img" name="media">
+                    <div class="day_form">
+                        <label for="day">Day Number:</label>
+                        <input type="text" id="day_num" name="day_num"> <br><br>
                     </div>
 
-                    <div>
-                        <label for="audio">audio</label>
-                        <input type="radio" id="audio" name="media">
+                    <div class="date_form">
+                        <label for="date">Date:</label>
+                        <input type="date" id="curr_date" name="curr_date"> <br><br>
                     </div>
 
-                    <div>
-                        <label for="video">video</label>
-                        <input type="radio" id="video" name="media"> 
-                    </div><br><br>
+                    <div class="bookmark_form">
+                        <label for="yes">Bookmark?:</label>
+                        <input type="checkbox" id="yes" name="good_day"> <br><br>
+                    </div>
 
-                    <label for="colors">Color of Post</label>
-                    <input list="color_of_text" name="colors" id="colors">
-                    <datalist id="color_of_text">
-                        <option value="Black">
-                        <option value="Red">
-                        <option value="Blue">
-                    </datalist> <br><br>
+                    <div class="media_form">
+                        <label>Type of Media:</label> <br>
+                        <div>
+                            <label for="img">image</label>
+                            <input type="radio" id="img" name="media">
+                        </div>
 
-                    <label for="type_day">How was the day?</label>
-                    <select name="type_day" id="type_day">
-                        <option value="Okay">Okay</option>
-                        <option value="Bad">Bad</option>
-                        <option value="Good">Good</option>
-                    </select><br><br>
-                    
+                        <div>
+                            <label for="audio">audio</label>
+                            <input type="radio" id="audio" name="media">
+                        </div>
 
-                    <label for="msg">Description of Day:</label><br>
-                    <textarea id="msg" name="user_msg"></textarea><br><br>
+                        <div>
+                            <label for="video">video</label>
+                            <input type="radio" id="video" name="media"> 
+                        </div><br><br>
+                    </div>
 
-                    <button>Submit</button>
+                    <div class="color_form">
+                        <label for="colors">Color of Post</label>
+                        <input list="color_of_text" name="colors" id="colors">
+                        <datalist id="color_of_text">
+                            <option value="Black">
+                            <option value="Red">
+                            <option value="Blue">
+                        </datalist> <br><br>
+                    </div>
+
+                    <div class="type_form">
+                        <label for="type_day">How was the day?</label>
+                        <select name="type_day" id="type_day">
+                            <option value="Okay">Okay</option>
+                            <option value="Bad">Bad</option>
+                            <option value="Good">Good</option>
+                        </select><br><br>
+                    </div>
+
+                    <div class="description_form">
+                        <label for="msg">Description of Day:</label><br>
+                        <textarea id="msg" name="day_msg"></textarea><br><br>
+                    </div>
+
+                    <button id="button">Submit</button>
 
 
                 </fieldset>
@@ -151,7 +174,7 @@
 
             <hr>
 
-            <footer>
+            <footer id="sign" class="foot">
                 <h3>Made by Christian Lee</h3>
             </footer>
 
