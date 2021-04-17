@@ -1,0 +1,168 @@
+/*Set up Font*/
+@font-face {
+    font-family: AD;
+    src: url(./files/ArchitectsDaughter-Regular.ttf);
+}
+
+/*Background Color*/
+body {
+    background-color: rgb(168, 192, 188);
+}
+
+/*Sets Color for Text*/
+* {
+    color: darkslategray;
+}
+
+/*Header*/
+header {
+    background-color: rgb(168, 192, 188);
+
+    /*make it sticky*/
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    padding-bottom: 2mm;
+}
+
+/*Footer*/
+h3 {
+    color: rgb(117, 47, 10);
+    display: block;
+    background-color: rgb(190, 166, 207);
+    width: 5in;
+    text-align: center;
+    padding: 1mm;
+    margin-top: 1mm;
+    margin-left: 1cm;
+    text-decoration: underline;
+}
+
+/*Footer Color Change*/
+#sign.foot:hover{
+    background-color:rgb(190, 166, 207);
+}
+
+/*Box for Each Day*/
+.day_box {
+    display: grid;
+    margin: 1cm;
+    background-color: gray;
+    border-radius: 1rem;
+    border-style: ridge;
+    border-color: hotpink;
+    border-width: 10px;
+    max-width: 75vw;
+    justify-content: left;
+
+
+    /*set up grid template*/
+    grid-template-areas:
+    ". header  .    side side"
+    "main main main side side"
+    "main main main side side"
+    "main main main side side";
+}
+
+/*Description of Day*/
+.day_msg {
+    grid-area: main;
+    font-family: AD;
+    background-color: #63C5DA;
+    border-radius: 1rem;;
+    padding-top: 1cm;
+    padding-left: 3mm;
+    padding-right: 3mm;
+    margin: 1rem;
+}
+
+/*Day Number*/
+.day_title{
+    align-self: stretch;
+    display: inline-block;
+    border-radius: 2mm;
+    grid-area: header;
+    text-align: center;
+    background-color: ivory;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin: 5mm;
+    width: 10vw;
+    height: 3vh;
+}
+
+/*Extra Media Elements*/
+#meme1, #song, #video {
+    grid-area: side;
+    background-color: rgb(224, 129, 129);
+    padding: 1cm;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+/*Navigation*/
+#navi {
+    display: block;
+    background-color: rgb(177, 157, 157);
+    border-radius: 10px;
+    border-style: double;
+    width: 35mm;
+    padding-top: 1mm;
+    padding-bottom: 1mm;
+    padding-left: 5mm;
+    padding-right: 5mm;
+    position: static;
+    margin: auto;
+}
+
+/*Format for Form*/
+fieldset {
+    background-color: lightgray;
+    width: 3in;
+    padding: 5mm;
+    margin: 5mm;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/*Form Contents*/
+[class$="form"]{
+    background-color: hsl(132, 31%, 74%);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 1rem;
+    border-style: double;
+    align-self: center;
+}
+
+/*Highlight Header*/
+header > p:active {
+    background-color: lightcoral;
+    width: 50vw;
+}
+
+/*Underline Italic*/
+p em {
+    text-decoration: green wavy underline;
+}
+
+/*Increase Font Size for Header*/
+h1 + p {
+    font-size: 5mm;
+}
+
+/*Underline Italic*/
+em ~ i {
+    text-decoration: underline;
+}
+
+/*Change color of header when screen width is less than 1080 p*/
+@media (max-width: 1080px) {
+    header {
+        border-radius: 1rem;
+        background-color: red;
+        padding: .5vh
+    }
+}
